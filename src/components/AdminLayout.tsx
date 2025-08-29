@@ -26,6 +26,8 @@ import {
 import { cn } from "@/lib/utils";
 import TokensPage from "./TokensPage";
 import DashboardPage from "./DashboardPage";
+import DisplaysPage from "./DisplaysPage";
+import SettingsPage from "./SettingsPage";
 
 interface AdminLayoutProps {
   language: string;
@@ -248,8 +250,8 @@ const AdminLayout = ({ language, setLanguage }: AdminLayoutProps) => {
           <Routes>
             <Route path="/dashboard" element={<DashboardPage language={language} />} />
             <Route path="/" element={<TokensPage language={language} />} />
-            <Route path="/displays" element={<div className="p-6">Displays Page</div>} />
-            <Route path="/settings" element={<div className="p-6">Settings Page</div>} />
+            <Route path="/displays" element={<DisplaysPage language={language} />} />
+            <Route path="/settings" element={<SettingsPage language={language} />} />
           </Routes>
         </main>
       </div>
