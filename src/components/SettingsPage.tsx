@@ -55,20 +55,20 @@ const SettingsPage = ({ language }: SettingsPageProps) => {
 
   const translations = {
     en: {
-      title: "AI Settings & Configuration",
-      overview: "Customize your queue management system with advanced AI features",
-      aiIntelligence: "AI Intelligence",
+      title: "Smart Settings & Configuration",
+      overview: "Customize your queue management system with advanced intelligent features",
+      smartIntelligence: "Smart Intelligence",
       systemPreferences: "System Preferences",
       security: "Security & Privacy",
       integrations: "Integrations",
       autoOptimization: "Auto Queue Optimization",
-      autoOptimizationDesc: "Let AI automatically balance queues for maximum efficiency",
+      autoOptimizationDesc: "Let automation balance queues for maximum efficiency",
       predictiveAnalytics: "Predictive Analytics",
-      predictiveAnalyticsDesc: "AI forecasts peak hours and wait times",
+      predictiveAnalyticsDesc: "Smart forecasts peak hours and wait times",
       smartNotifications: "Smart Notifications", 
       smartNotificationsDesc: "Intelligent alerts based on queue patterns",
       voiceAnnouncements: "Voice Announcements",
-      voiceAnnouncementsDesc: "AI-powered multilingual announcements",
+      voiceAnnouncementsDesc: "Automated multilingual announcements",
       queueBalancing: "Dynamic Queue Balancing",
       queueBalancingDesc: "Automatically distribute load across counters",
       capacityPrediction: "Capacity Prediction",
@@ -91,13 +91,13 @@ const SettingsPage = ({ language }: SettingsPageProps) => {
       apiIntegrations: "API Integrations",
       saveChanges: "Save Changes",
       resetDefaults: "Reset to Defaults",
-      aiPerformance: "AI Performance",
+      smartPerformance: "Smart Performance",
       excellent: "Excellent",
       systemHealth: "System Health",
       optimal: "Optimal",
       activeSessions: "Active Sessions",
       uptime: "System Uptime",
-      lastOptimization: "Last AI Optimization",
+      lastOptimization: "Last Smart Optimization",
       nextScheduled: "Next Scheduled",
       enabled: "Enabled",
       disabled: "Disabled",
@@ -107,20 +107,20 @@ const SettingsPage = ({ language }: SettingsPageProps) => {
       connected: "Connected"
     },
     hi: {
-      title: "AI सेटिंग्स और कॉन्फ़िगरेशन",
-      overview: "उन्नत AI फीचर्स के साथ अपने क्यू मैनेजमेंट सिस्टम को कस्टमाइज़ करें",
-      aiIntelligence: "AI इंटेलिजेंस",
+      title: "स्मार्ट सेटिंग्स और कॉन्फ़िगरेशन",
+      overview: "उन्नत स्मार्ट फीचर्स के साथ अपने क्यू मैनेजमेंट सिस्टम को कस्टमाइज़ करें",
+      smartIntelligence: "स्मार्ट इंटेलिजेंस",
       systemPreferences: "सिस्टम प्राथमिकताएं",
       security: "सुरक्षा और गोपनीयता",
       integrations: "इंटीग्रेशन",
       autoOptimization: "ऑटो क्यू ऑप्टिमाइज़ेशन",
-      autoOptimizationDesc: "अधिकतम दक्षता के लिए AI को स्वचालित रूप से क्यू संतुलित करने दें",
+      autoOptimizationDesc: "अधिकतम दक्षता के लिए स्वचालित रूप से क्यू संतुलित करने दें",
       predictiveAnalytics: "प्रेडिक्टिव एनालिटिक्स",
-      predictiveAnalyticsDesc: "AI पीक आवर्स और प्रतीक्षा समय का पूर्वानुमान लगाता है",
+      predictiveAnalyticsDesc: "स्मार्ट सिस्टम पीक आवर्स और प्रतीक्षा समय का पूर्वानुमान लगाता है",
       smartNotifications: "स्मार्ट नोटिफिकेशन",
       smartNotificationsDesc: "क्यू पैटर्न के आधार पर बुद्धिमान अलर्ट",
       voiceAnnouncements: "वॉयस घोषणाएं",
-      voiceAnnouncementsDesc: "AI-संचालित बहुभाषी घोषणाएं",
+      voiceAnnouncementsDesc: "स्वचालित बहुभाषी घोषणाएं",
       queueBalancing: "डायनामिक क्यू बैलेंसिंग",
       queueBalancingDesc: "काउंटर्स में लोड को स्वचालित रूप से वितरित करें",
       capacityPrediction: "क्षमता भविष्यवाणी",
@@ -143,13 +143,13 @@ const SettingsPage = ({ language }: SettingsPageProps) => {
       apiIntegrations: "API इंटीग्रेशन",
       saveChanges: "परिवर्तन सहेजें",
       resetDefaults: "डिफ़ॉल्ट रीसेट करें",
-      aiPerformance: "AI प्रदर्शन",
+      smartPerformance: "स्मार्ट प्रदर्शन",
       excellent: "उत्कृष्ट",
       systemHealth: "सिस्टम स्वास्थ्य",
       optimal: "इष्टतम",
       activeSessions: "सक्रिय सत्र",
       uptime: "सिस्टम अपटाइम",
-      lastOptimization: "अंतिम AI ऑप्टिमाइज़ेशन",
+      lastOptimization: "अंतिम स्मार्ट ऑप्टिमाइज़ेशन",
       nextScheduled: "अगला निर्धारित",
       enabled: "सक्षम",
       disabled: "अक्षम",
@@ -182,7 +182,7 @@ const SettingsPage = ({ language }: SettingsPageProps) => {
             <RefreshCw className="h-4 w-4 mr-2" />
             {t.resetDefaults}
           </Button>
-          <Button className="bg-gradient-primary">
+          <Button className="bg-primary">
             <Save className="h-4 w-4 mr-2" />
             {t.saveChanges}
           </Button>
@@ -193,9 +193,9 @@ const SettingsPage = ({ language }: SettingsPageProps) => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <Card className="shadow-soft border-l-4 border-l-success">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">
-              {t.aiPerformance}
-            </CardTitle>
+              <CardTitle className="text-sm font-medium text-muted-foreground">
+                {t.smartPerformance}
+              </CardTitle>
             <Brain className="h-4 w-4 text-success" />
           </CardHeader>
           <CardContent>
@@ -245,12 +245,12 @@ const SettingsPage = ({ language }: SettingsPageProps) => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* AI Intelligence Settings */}
+        {/* Smart Intelligence Settings */}
         <Card className="shadow-soft">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Brain className="h-5 w-5 text-primary" />
-              {t.aiIntelligence}
+              {t.smartIntelligence}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">

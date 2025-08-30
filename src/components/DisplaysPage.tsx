@@ -77,11 +77,11 @@ const DisplaysPage = ({ language }: DisplaysPageProps) => {
 
   const translations = {
     en: {
-      title: "AI Display Management",
-      overview: "Smart displays powered by AI for optimal user experience",
+      title: "Smart Display Management",
+      overview: "Intelligent displays powered by automation for optimal user experience",
       totalDisplays: "Total Displays",
       activeDisplays: "Active Displays", 
-      smartContent: "AI-Generated Content",
+      smartContent: "Auto-Generated Content",
       autoAnnouncements: "Auto Announcements",
       displays: "displays",
       active: "Active",
@@ -90,7 +90,7 @@ const DisplaysPage = ({ language }: DisplaysPageProps) => {
       connected: "Connected",
       disconnected: "Disconnected",
       audio: "Audio",
-      aiOptimized: "AI Optimized",
+      aiOptimized: "Smart Optimized",
       currentContent: "Current Content",
       nextUpdate: "Next Update",
       actions: "Actions",
@@ -102,18 +102,18 @@ const DisplaysPage = ({ language }: DisplaysPageProps) => {
       theme: "Display Theme",
       autoRefresh: "Auto Refresh",
       smartAnnouncements: "Smart Announcements",
-      contentOptimization: "AI Content Optimization",
+      contentOptimization: "Digital Content Optimization",
       accessibility: "Accessibility Mode",
       minutes: "minutes",
       seconds: "seconds",
       live: "Live"
     },
     hi: {
-      title: "AI डिस्प्ले प्रबंधन",
-      overview: "इष्टतम उपयोगकर्ता अनुभव के लिए AI द्वारा संचालित स्मार्ट डिस्प्ले",
+      title: "स्मार्ट डिस्प्ले प्रबंधन",
+      overview: "इष्टतम उपयोगकर्ता अनुभव के लिए स्वचालन द्वारा संचालित स्मार्ट डिस्प्ले",
       totalDisplays: "कुल डिस्प्ले",
       activeDisplays: "सक्रिय डिस्प्ले",
-      smartContent: "AI-जनरेटेड सामग्री",
+      smartContent: "ऑटो-जनरेटेड सामग्री",
       autoAnnouncements: "ऑटो घोषणाएं",
       displays: "डिस्प्ले",
       active: "सक्रिय",
@@ -122,7 +122,7 @@ const DisplaysPage = ({ language }: DisplaysPageProps) => {
       connected: "कनेक्टेड",
       disconnected: "डिस्कनेक्टेड",
       audio: "ऑडियो",
-      aiOptimized: "AI अनुकूलित",
+      aiOptimized: "स्मार्ट अनुकूलित",
       currentContent: "वर्तमान सामग्री",
       nextUpdate: "अगला अपडेट",
       actions: "कार्य",
@@ -134,7 +134,7 @@ const DisplaysPage = ({ language }: DisplaysPageProps) => {
       theme: "डिस्प्ले थीम",
       autoRefresh: "ऑटो रिफ्रेश",
       smartAnnouncements: "स्मार्ट घोषणाएं",
-      contentOptimization: "AI सामग्री अनुकूलन",
+      contentOptimization: "डिजिटल सामग्री अनुकूलन",
       accessibility: "पहुंच मोड",
       minutes: "मिनट",
       seconds: "सेकंड",
@@ -182,9 +182,9 @@ const DisplaysPage = ({ language }: DisplaysPageProps) => {
           <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
           <p className="text-muted-foreground mt-1">{t.overview}</p>
         </div>
-        <Button className="gap-2 bg-gradient-primary">
+        <Button className="gap-2 bg-primary">
           <Zap className="h-4 w-4" />
-          AI Auto-Optimize
+          Smart Auto-Optimize
         </Button>
       </div>
 
@@ -225,7 +225,7 @@ const DisplaysPage = ({ language }: DisplaysPageProps) => {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-teal">85%</div>
-            <p className="text-xs text-muted-foreground">AI optimized</p>
+            <p className="text-xs text-muted-foreground">Smart optimized</p>
           </CardContent>
         </Card>
 
@@ -265,7 +265,7 @@ const DisplaysPage = ({ language }: DisplaysPageProps) => {
                         {display.aiOptimized && (
                           <Badge className="bg-teal/10 text-teal border-teal/30">
                             <Brain className="h-3 w-3 mr-1" />
-                            AI
+                            Smart
                           </Badge>
                         )}
                       </div>
@@ -308,7 +308,7 @@ const DisplaysPage = ({ language }: DisplaysPageProps) => {
                     
                     <div className="flex items-center gap-2">
                       <label htmlFor={`ai-${display.id}`} className="text-sm">
-                        AI
+                        Smart
                       </label>
                       <Switch
                         id={`ai-${display.id}`}
