@@ -48,8 +48,8 @@ const DashboardPage = ({ language }: DashboardPageProps) => {
     { id: 5, phone: "+91 5432109876", time: "11:22 AM", purpose: "Card Issues", status: "Waiting", queue: "Queue B" }
   ]);
 
-  const [filterPurpose, setFilterPurpose] = useState("");
-  const [filterStatus, setFilterStatus] = useState("");
+  const [filterPurpose, setFilterPurpose] = useState("all");
+  const [filterStatus, setFilterStatus] = useState("all");
   const [searchPhone, setSearchPhone] = useState("");
   
   const [selectedCustomers, setSelectedCustomers] = useState<number[]>([]);
@@ -163,8 +163,8 @@ const DashboardPage = ({ language }: DashboardPageProps) => {
 
   const filteredCustomers = customerData.filter(customer => {
     const matchesPhone = customer.phone.toLowerCase().includes(searchPhone.toLowerCase());
-    const matchesPurpose = filterPurpose === "" || customer.purpose === filterPurpose;
-    const matchesStatus = filterStatus === "" || customer.status === filterStatus;
+    const matchesPurpose = filterPurpose === "all" || customer.purpose === filterPurpose;
+    const matchesStatus = filterStatus === "all" || customer.status === filterStatus;
     return matchesPhone && matchesPurpose && matchesStatus;
   });
 
@@ -335,7 +335,7 @@ const DashboardPage = ({ language }: DashboardPageProps) => {
                 <SelectValue placeholder={t.allPurposes} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">{t.allPurposes}</SelectItem>
+                <SelectItem value="all">{t.allPurposes}</SelectItem>
                 <SelectItem value="Account Opening">Account Opening</SelectItem>
                 <SelectItem value="Loan Inquiry">Loan Inquiry</SelectItem>
                 <SelectItem value="Document Verification">Document Verification</SelectItem>
@@ -348,7 +348,7 @@ const DashboardPage = ({ language }: DashboardPageProps) => {
                 <SelectValue placeholder={t.allStatuses} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">{t.allStatuses}</SelectItem>
+                <SelectItem value="all">{t.allStatuses}</SelectItem>
                 <SelectItem value="Completed">{t.completed}</SelectItem>
                 <SelectItem value="In Progress">{t.inProgress}</SelectItem>
                 <SelectItem value="Waiting">{t.waiting}</SelectItem>
